@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+             x:Class="MauiGPT.MainPage"
+             Title="AI Powered Trip Assistant">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,30"
+            VerticalOptions="StartAndExpand">
+
+            <Label
+                Text="Let's plan your trip!"
+                FontSize="32"
+                HorizontalOptions="Start" />
+
+            <Entry
+                x:Name="LocationEntry"
+                Placeholder="Enter your destination:"
+                HorizontalOptions="Start"/>
+
+            <Button
+                x:Name="AttractionsBtn"
+                Text="See things to do!"
+                Clicked="OnAttractionsClicked"
+                HorizontalOptions="Start" />
+
+            <Label x:Name="attractionsResponseLabel"
+                FontSize="18"
+                HorizontalOptions="Start" />
+
+            <Button
+                x:Name="hotelsBtn"
+                Text="See hotel options!"
+                Clicked="OnHotelsClicked"
+                HorizontalOptions="Start" />
+
+            <Label x:Name="hotelsResponseLabel"
+                FontSize="18"
+                HorizontalOptions="Start" />
+
+            <HorizontalStackLayout>
+                <Label Text="Travel Dates: " VerticalOptions="Center" />
+                <telerik:RadDatePicker x:Name="outboundDatePicker" VerticalOptions="Center" Placeholder="Outbound" PickerMode="DropDown"  />
+                <telerik:RadDatePicker x:Name="inboundDatePicker" VerticalOptions="Center" Placeholder="Inbound" PickerMode="DropDown" />
+            </HorizontalStackLayout>
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
